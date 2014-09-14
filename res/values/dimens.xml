@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="main_section_item_height">64dp</dimen>
+    <dimen name="secondary_section_item_height">46dp</dimen>
+    <dimen name="main_section_icon_size">48dp</dimen>
+    <dimen name="secondary_section_icon_size">32dp</dimen>
+    <dimen name="myarmy_actionbar_height">62.0dip</dimen>
+    <dimen name="myarmy_drawer_width">300.00dp</dimen>
+    <dimen name="banner_s_space">4dip</dimen>
+    <dimen name="banner_m_space">8dip</dimen>
+
+</resources>

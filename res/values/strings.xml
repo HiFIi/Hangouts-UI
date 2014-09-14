@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Custom Hangouts</string>
+    <string name="blank_text"></string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="help_feedback">Help &amp; feedback</string>
+    <string name="name">Kyler Jeffrey</string>
+    <string name="email">mbqsniper@gmail.com</string>
+    <string name="no_conversations_text_incl_sms">"Send an SMS or
+Hangouts message, or
+start a call"</string>
+
+</resources>

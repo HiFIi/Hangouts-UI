@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff38712a"
+    android:fitsSystemWindows="true" >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fffafafa"
+        android:fadingEdge="horizontal"
+        android:fitsSystemWindows="true"
+        android:hapticFeedbackEnabled="false"
+        android:overScrollMode="never" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view1"
+            android:background="#ff00b53c"
+            tools:ignore="UnknownIdInLayout" >
+        </android.support.v4.view.ViewPager>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/drawer_onpressed"
+            android:choiceMode="singleChoice"
+            android:divider="#00000000"
+            android:dividerHeight="1.00dp"
+            android:longClickable="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:scrollingCache="true" />
+    </android.support.v4.widget.DrawerLayout>
+
+</FrameLayout>

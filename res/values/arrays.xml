@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_main_sections">
+        <item>Invites</item>
+        <item>Archived conversations</item>
+        <item>Blocked people</item>
+        <item>Snooze notifications</item>
+        <item>Set mood</item>
+        <item>Settings</item>
+        <item>@string/help_feedback</item>      
+    </string-array>
+
+    <array name="drawable_ids">
+        <item>@drawable/ic_drafts</item>
+        <item>@drawable/ic_archive</item>
+        <item>@drawable/ic_report</item>
+        <item>@drawable/ic_notifications_off</item>
+        <item>@drawable/ic_insert_emoticon</item>
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_help</item>        
+    </array>
+
+</resources>
