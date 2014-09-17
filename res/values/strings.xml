@@ -8,8 +8,7 @@
     <string name="help_feedback">Help &amp; feedback</string>
     <string name="name">Kyler Jeffrey</string>
     <string name="email">mbqsniper@gmail.com</string>
-    <string name="no_conversations_text_incl_sms">"Send an SMS or
-Hangouts message, or
-start a call"</string>
+    <string name="no_invites">No invites</string>
+    <string name="help_and_feedback">Help and feedback</string>
 
 </resources>

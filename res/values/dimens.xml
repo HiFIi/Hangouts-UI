@@ -9,5 +9,6 @@
     <dimen name="myarmy_drawer_width">300.00dp</dimen>
     <dimen name="banner_s_space">4dip</dimen>
     <dimen name="banner_m_space">8dip</dimen>
+    <dimen name="nav_drawer_width_custom">300.0dip</dimen>
 
 </resources>

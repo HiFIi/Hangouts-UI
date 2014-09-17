@@ -1,8 +1,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFfafafa" >
 
+
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical|left"
+        android:hint="@string/realtimechat_new_conversation_hint_text"
+        android:inputType="number|textAutoComplete|textEmailAddress|textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textSize="14.0sp" />
+    
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="0dp"
+        android:background="#80999999" />
+
+    <com.kyler.l.mms.design.tests.MyTextView
+        android:id="@+id/frequent_contacts_bold_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:paddingLeft="16.0dip"
+        android:paddingStart="64.0dip"
+        android:singleLine="true"
+        android:text="@string/frequent_contacts_title"
+        android:textColor="#ff202020"
+        android:textSize="20.0sp"
+        customfontdemo:fontName="Roboto-Bold.ttf"
+        tools:ignore="RtlSymmetry" />
+    
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/frequent_contacts_bold_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#80999999" />    
 
 </RelativeLayout>

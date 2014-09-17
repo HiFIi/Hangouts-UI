@@ -2,4 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.kyler.hangouts.ui.demo.HangoutsDemo" >
 
+    <item
+        android:id="@+id/helpAndFeedback"
+        android:showAsAction="never"
+        android:title="@string/help_and_feedback">
+    </item>
+
 </menu>

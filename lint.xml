@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+    <issue id="ContentDescription" severity="ignore" />
     <issue id="OldTargetApi" severity="ignore" />
     <issue id="RtlHardcoded" severity="ignore" />
+    <issue id="RtlSymmetry" severity="ignore" />
+    <issue id="UnusedAttribute" severity="ignore" />
+    <issue id="UselessParent" severity="ignore" />
 </lint>

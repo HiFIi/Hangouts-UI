@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff53a93f"
+    android:fitsSystemWindows="true" >
+    
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffafafa" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_zero_blocked" />
+    
+    <com.kyler.l.mms.design.tests.MyTextView
+        android:id="@+id/NoInvites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView1"
+        android:ellipsize="marquee"
+        android:gravity="center|center_vertical"
+        android:singleLine="true"
+        android:text="@string/blocked_people_empty"
+        android:textColor="#ff777777"
+        android:textSize="22.0sp"
+        customfontdemo:fontName="Roboto-Thin.ttf"
+        tools:ignore="RtlSymmetry" />    
+
+</RelativeLayout>
+</FrameLayout>

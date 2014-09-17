@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff38712a"
+    android:background="#ff53a93f"
     android:fitsSystemWindows="true" >
 
     <android.support.v4.widget.DrawerLayout
@@ -34,10 +34,11 @@
 
         <ListView
             android:id="@+id/left_drawer"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/nav_drawer_width_custom"
             android:layout_height="fill_parent"
             android:layout_gravity="start"
-            android:background="@drawable/drawer_onpressed"
+            android:listSelector="@drawable/drawer"
+            android:background="#fffafafa"
             android:choiceMode="singleChoice"
             android:divider="#00000000"
             android:dividerHeight="1.00dp"

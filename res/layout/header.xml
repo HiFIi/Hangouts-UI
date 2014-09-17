@@ -14,11 +14,12 @@
 
     <com.wisemandesigns.android.widgets.CircularImageView
         android:id="@+id/imageView1"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="12dp"
         android:scaleType="centerCrop"
         android:src="@drawable/me" />
 
@@ -54,5 +55,13 @@
         android:textSize="18.0sp"
         customfontdemo:fontName="Roboto-Bold.ttf"
         tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:background="#59888888" />
 
 </RelativeLayout>

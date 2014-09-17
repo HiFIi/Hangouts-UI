@@ -28,7 +28,7 @@
         android:paddingLeft="64.0dip"
         android:paddingStart="64.0dip"
         android:singleLine="true"
-        android:textColor="#ff454545"
+        android:textColor="@color/navigation_drawer_item_text"
         android:textSize="16.0sp"
         customfontdemo:fontName="Roboto-Thin.ttf"
         tools:ignore="RtlSymmetry" />

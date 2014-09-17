@@ -20,5 +20,13 @@
         <item>@drawable/ic_settings</item>
         <item>@drawable/ic_help</item>        
     </array>
+    <string-array name="snoozeFor">
+        <item >1 hour</item>
+        <item >2 hours</item>
+        <item >4 hours</item>
+        <item >8 hours</item>
+        <item >24 hours</item>
+        <item >72 hours</item>
+    </string-array>
 
 </resources>

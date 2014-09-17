@@ -12,11 +12,13 @@
 
     <!-- 55% Transparent -->
     <color name="hangouts_theme_header_view_view_color">#8C343435</color>
+    
     <color name="hangouts_theme_drawer_cachecolorhint_color">#FF575757</color>
 
     <!-- 80% Transparent -->
     <color name="hangouts_theme_drawer_divider_color">#CC2A2A2A</color>
-    <color name="hangouts_theme_actionbar_titletextstyle_colorhint">#FFD4D5D2</color>
+    
+    <color name="hangouts_theme_actionbar_titletextstyle_colorhint">#FFfafafa</color>
     <color name="hangouts_theme_actionbar_titletextstyle_text_color">#FFFAFAFA</color>
     <color name="theme_android_mms_dialog_one_header_color">#FF5677FC</color>
     <color name="theme_android_mms_dialog_one_button_background_color">#FFF9F9F9</color>

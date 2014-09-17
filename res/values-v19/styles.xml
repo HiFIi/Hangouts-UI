@@ -9,6 +9,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_action_back</item>
+        <item name="android:actionOverflowButtonStyle">@style/HangoutsUITheme.OverFlow</item>
     </style>
 
     <style name="HangoutsUITheme.Widget" parent="@android:style/Theme.Holo.Light">
@@ -46,13 +47,95 @@
         <item name="android:textColor">@color/hangouts_theme_actionbar_titletextstyle_text_color</item>
         <item name="android:fontFamily">sans-serif-thin</item>
     </style>
-    
-  <style name="HangoutsUITheme.ActionBar.Tab" parent="android:style/Widget.Holo.ActionBar.TabView">
+
+    <style name="HangoutsUITheme.ActionBar.Tab" parent="android:style/Widget.Holo.ActionBar.TabView">
         <item name="android:background">@drawable/action_bar_tab</item>
     </style>
-    
+
     <style name="ActionBarTabStyle.Example" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_example</item>
-    </style>  
+    </style>
+
+    <style name="HangoutsUITheme.Invites" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/HangoutsUITheme.Invites.ActionBar</item>
+        <item name="android:actionBarWidgetTheme">@style/HangoutsUITheme.Invites.Widget</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_back</item>
+        <item name="android:actionOverflowButtonStyle">@style/HangoutsUITheme.OverFlow</item>
+    </style>
+
+    <style name="HangoutsUITheme.Invites.Widget" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textColorHint">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:textColor">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:background">@color/hangouts_theme_widget_background_color</item>
+    </style>
+
+    <style name="HangoutsUITheme.Invites.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:titleTextStyle">@style/HangoutsUITheme.ActionBar.TitleTextStyle</item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:backgroundStacked">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:backgroundSplit">@color/hangouts_theme_actionbar_color</item>
+    </style>
+
+    <style name="HangoutsUITheme.ArchivedConversations" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/HangoutsUITheme.ArchivedConversations.ActionBar</item>
+        <item name="android:actionBarWidgetTheme">@style/HangoutsUITheme.ArchivedConversations.Widget</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_back</item>
+        <item name="android:actionOverflowButtonStyle">@style/HangoutsUITheme.OverFlow</item>
+    </style>
+
+    <style name="HangoutsUITheme.ArchivedConversations.Widget" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textColorHint">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:textColor">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:background">@color/hangouts_theme_widget_background_color</item>
+    </style>
+
+    <style name="HangoutsUITheme.ArchivedConversations.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:titleTextStyle">@style/HangoutsUITheme.ActionBar.TitleTextStyle</item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:backgroundStacked">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:backgroundSplit">@color/hangouts_theme_actionbar_color</item>
+    </style>
+    
+    <style name="HangoutsUITheme.OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_moreoverflow_mtrl_alpha</item>
+    </style>
+    
+    <style name="HangoutsUITheme.BlockedPeople" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/HangoutsUITheme.BlockedPeople.ActionBar</item>
+        <item name="android:actionBarWidgetTheme">@style/HangoutsUITheme.BlockedPeople.Widget</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_back</item>
+        <item name="android:actionOverflowButtonStyle">@style/HangoutsUITheme.OverFlow</item>
+    </style>
+
+    <style name="HangoutsUITheme.BlockedPeople.Widget" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textColorHint">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:textColor">@color/hangouts_theme_widget_text_color</item>
+        <item name="android:background">@color/hangouts_theme_widget_background_color</item>
+    </style>
+
+    <style name="HangoutsUITheme.BlockedPeople.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:titleTextStyle">@style/HangoutsUITheme.ActionBar.TitleTextStyle</item>
+        <item name="android:height">58.0dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:backgroundStacked">@color/hangouts_theme_actionbar_color</item>
+        <item name="android:backgroundSplit">@color/hangouts_theme_actionbar_color</item>
+    </style>    
 
 </resources>

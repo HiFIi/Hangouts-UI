@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -21,20 +23,20 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.style.StyleSpan;
 import android.text.style.TypefaceSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
+// import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import com.kyler.hangouts.ui.demo.activities.ArchivedConversations;
+import com.kyler.hangouts.ui.demo.activities.BlockedPeople;
+import com.kyler.hangouts.ui.demo.activities.Invites;
 import com.kyler.hangouts.ui.demo.adapter.HangoutsDrawerAdapter;
 import com.kyler.hangouts.ui.demo.adapter.TabsPagerAdapter;
 import com.kyler.hangouts.ui.demo.ui.Icons;
@@ -71,10 +73,6 @@ public class HangoutsDemo extends FragmentActivity implements
 	@SuppressWarnings("unused")
 	private String[] tabs = { "", "", "" };
 
-	public static final StyleSpan STYLE_BOLD = new StyleSpan(Typeface.BOLD);
-
-	SpannableStringBuilder buf = new SpannableStringBuilder();
-
 	@SuppressLint("InlinedApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +108,7 @@ public class HangoutsDemo extends FragmentActivity implements
 		getActionBar().setHomeButtonEnabled(true);
 
 		ImageView view = (ImageView) findViewById(android.R.id.home);
-		view.setPadding(16, 0, 0, 0);
+		view.setPadding(15, 0, 0, 0);
 
 		setContentView(R.layout.hangouts_demo);
 
@@ -199,8 +197,8 @@ public class HangoutsDemo extends FragmentActivity implements
 				.setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_chat_light)
 				.setTabListener(this));
-		actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_dialpad_light)
-				.setTabListener(this));
+		actionBar.addTab(actionBar.newTab()
+				.setIcon(R.drawable.ic_dialpad_light).setTabListener(this));
 
 		viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -226,28 +224,15 @@ public class HangoutsDemo extends FragmentActivity implements
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			selectItem(position);
-			setNavDrawerItemNormal(position);
-			TextView txtview = ((TextView) view.findViewById(R.id.MDText));
-			txtview.setTypeface(null, Typeface.BOLD);
-		}
-
-		public void setNavDrawerItemNormal(int position) {
-			for (int i = position; i < mDrawerList.getChildCount(); i++) {
-				View v = mDrawerList.getChildAt(i);
-				TextView txtview = ((TextView) v.findViewById(R.id.MDText));
-				Typeface font = Typeface.createFromAsset(context.getAssets(),
-						"fonts/Roboto-Thin.ttf");
-				txtview.setTypeface(font);
-			}
 		}
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-		MenuInflater inflater = getMenuInflater();
+		// MenuInflater inflater = getMenuInflater();
 
-		inflater.inflate(R.menu.hangouts_demo, menu);
+		// inflater.inflate(R.menu.hangouts_demo, menu);
 
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -284,27 +269,27 @@ public class HangoutsDemo extends FragmentActivity implements
 			break;
 
 		case 1:
-
-			overridePendingTransition(R.anim.activity_open_enter,
-					R.anim.activity_open_exit);
+			Intent invites = new Intent(this, Invites.class);
+			startActivity(invites);
 			break;
 
 		case 2:
-
-			overridePendingTransition(R.anim.activity_open_enter,
-					R.anim.activity_open_exit);
+			Intent archivedconversations = new Intent(this,
+					ArchivedConversations.class);
+			startActivity(archivedconversations);
 			break;
 
 		case 3:
+			Intent blockedpeople = new Intent(this,
+					BlockedPeople.class);
+			startActivity(blockedpeople);
 			break;
 
 		case 4:
+			snoozeForDialog();
 			break;
 
 		case 5:
-
-			overridePendingTransition(R.anim.activity_open_enter,
-					R.anim.activity_open_exit);
 			break;
 
 		}
@@ -314,6 +299,20 @@ public class HangoutsDemo extends FragmentActivity implements
 		mDrawerList.setItemChecked(position, true);
 
 		mDrawerLayout.closeDrawer(mDrawerList);
+	}
+
+	private void snoozeForDialog() {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(R.string.dnd_dialog_title);
+		builder.setItems(R.array.snoozeFor,
+				new DialogInterface.OnClickListener() {
+
+					public void onClick(DialogInterface dialog, int item) {
+					}
+				});
+		AlertDialog alert = builder.create();
+		alert.show();
 	}
 
 	@Override
